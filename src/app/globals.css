@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: "OutfitLight";
+    src: url("/fonts/OutfitLight.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "OutfitBold";
+    src: url("/fonts/OutfitRegular.ttf") format("truetype");
+  }
+
+  *,
+  p,
+  a,
+  span,
+  label {
+    font-family: OutfitLight !important;
+  }
+h1,h2,h3,h4,h5,h6{
+    font-family: OutfitBold !important;
+}
