@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaFacebook, FaEnvelope, FaMoon, FaSun } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaFacebook, FaEnvelope, FaMoon, FaSun, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Link as ScrollLink, Element } from 'react-scroll';
@@ -49,7 +49,6 @@ export default function Portfolio() {
 
       {/* Hero Section */}
       <section className='flex flex-col md:flex-row justify-between items-center gap-10 py-20 px-6'>
-        {/* Profile Image & Info */}
         <div className='w-full md:w-1/2 flex flex-col items-center text-center md:text-left'>
           <motion.img
             src='/images/James.jpg'
@@ -63,14 +62,10 @@ export default function Portfolio() {
           <p className='text-gray-600 dark:text-gray-300 mt-2 max-w-sm'>
             Full-Stack Developer | Passionate about crafting scalable web apps and smooth user experiences.
           </p>
-
-          {/* CTA Buttons */}
           <div className='mt-4 flex flex-wrap gap-4 justify-center md:justify-start'>
             <a href="#projects" className='px-5 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition'>View Projects</a>
             <a href="#contact-me" className='px-5 py-2 border border-blue-600 text-blue-600 rounded hover:bg-blue-100 dark:hover:bg-gray-700 transition'>Contact Me</a>
           </div>
-
-          {/* Social Icons */}
           <div className='mt-4 flex space-x-4'>
             <Link href="#"><FaGithub className='text-xl hover:text-blue-500' /></Link>
             <Link href="#"><FaLinkedin className='text-xl hover:text-blue-500' /></Link>
@@ -79,7 +74,6 @@ export default function Portfolio() {
           </div>
         </div>
 
-        {/* Typewriter + Headline */}
         <div className='w-full md:w-1/2 text-center md:text-left'>
           <h1 className='text-3xl md:text-5xl font-bold leading-tight'>
             Hi, I'm James 👋<br />
@@ -130,35 +124,45 @@ export default function Portfolio() {
         </section>
       </Element>
 
-      {/* About Me Section */}
-      <Element name='about-me'>
-        <section className='py-20 px-6 text-left'>
-          <motion.h3 className='text-3xl font-semibold mb-6' initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>About Me</motion.h3>
-          <p className='text-justify'>I am a passionate developer with X years of experience in full-stack development, UI/UX design, and delivering performant applications for real-world business needs. I enjoy working with JavaScript, React, Node.js, and modern frameworks.</p>
-        </section>
-      </Element>
 
-      {/* Contact Section */}
+      {/* Updated Contact Section */}
       <Element name='contact-me'>
-        <section className='py-20 px-6'>
-          <motion.h3 className='text-3xl font-semibold mb-6' initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>Contact Me</motion.h3>
-          <form className='max-w-lg mx-auto space-y-4'>
-            <input type='text' placeholder='Name' className='w-full p-3 rounded bg-gray-200 dark:bg-gray-800' />
-            <input type='email' placeholder='Email' className='w-full p-3 rounded bg-gray-200 dark:bg-gray-800' />
-            <textarea placeholder='Message' className='w-full p-3 rounded bg-gray-200 dark:bg-gray-800'></textarea>
-            <button className='w-full p-3 bg-blue-600 text-white rounded'>Send Message</button>
-          </form>
+        <section className='py-20 px-6 md:px-32'>
+          <motion.div className='grid grid-cols-1 md:grid-cols-2 gap-10' initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
+            {/* Left side - contact info */}
+            <div className='space-y-6'>
+              <h3 className='text-4xl font-bold'>Contact Me</h3>
+              <p className="mt-4 pl-5 text-lg text-gray-600 dark:text-gray-500 max-w-2xl">
+                Have a project or idea in mind? Reach out and let’s make it happen!
+              </p>
+              <div className='flex pl-5 items-center gap-4'>
+                <FaPhoneAlt className='text-blue-600 text-2xl' />
+                <span className='text-lg'>+33 7 51 46 03 55</span>
+              </div>
+              <div className='flex pl-5 items-center gap-4'>
+                <FaEnvelope className='text-blue-600 text-2xl' />
+                <span className='text-lg'>mbajames122@gmail.com</span>
+              </div>
+              <div className='flex pl-5 items-center gap-4'>
+                <FaMapMarkerAlt className='text-blue-600 text-2xl' />
+                <span className='text-lg'>Ris Orangis ,91130 Ile-de-France, France</span>
+              </div>
+            </div>
+
+            {/* Right side - form */}
+            <form className='space-y-4'>
+              <div className='flex gap-4'>
+                <input type='text' placeholder='First Name' className='w-1/2 p-3 rounded bg-gray-200 dark:bg-gray-800' />
+                <input type='text' placeholder='Last Name' className='w-1/2 p-3 rounded bg-gray-200 dark:bg-gray-800' />
+              </div>
+              <input type='email' placeholder='Email' className='w-full p-3 rounded bg-gray-200 dark:bg-gray-800' />
+              <textarea placeholder='Message' className='w-full p-3 rounded bg-gray-200 dark:bg-gray-800 h-32'></textarea>
+              <button className='w-full p-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition'>Submit</button>
+            </form>
+          </motion.div>
         </section>
       </Element>
 
-      {/* Link Preview */}
-      <div className='px-6 py-10'>
-        <LinkPreview
-          url='https://glitzteck.com'
-          width={'200px'}
-          customDomain='https://lpdg-server.azurewebsites.net/parse/link'
-        />
-      </div>
 
       {/* Footer */}
       <footer className='py-6 text-center bg-gray-200 dark:bg-gray-800'>
