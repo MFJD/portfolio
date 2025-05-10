@@ -76,7 +76,7 @@ export default function Portfolio() {
 
         <div className='w-full md:w-1/2 text-center md:text-left'>
           <h1 className='text-3xl md:text-5xl font-bold leading-tight'>
-            Hi, I'm James 👋<br />
+            Hi, I&apos;m James 👋<br />
             <span className='text-blue-600'>Crafting Ideas Into Reality</span>
           </h1>
           <div className='mt-4 text-xl font-medium text-gray-700 dark:text-gray-300'>
