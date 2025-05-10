@@ -8,12 +8,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Link as ScrollLink, Element } from 'react-scroll';
 import technologies from '@/components/tech';
-import LinkPreview from '@ashwamegh/react-link-preview';
-import '@ashwamegh/react-link-preview/dist/index.css';
 
 export default function Portfolio() {
   const [darkMode, setDarkMode] = useState(false);
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection] = useState('');
 
   useEffect(() => {
     document.body.classList.toggle('dark', darkMode);
