@@ -99,7 +99,7 @@ export default function Portfolio() {
             {technologies.map((tech) => (
               <motion.div key={tech.name} className='flex items-center space-x-2 p-4 bg-gray-200 dark:bg-gray-800 rounded-lg' initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
                 <Image src={tech.icon} alt={tech.name} width={40} height={40} />
-                <span>{tech.name}</span>
+                <span className='dark:text-gray-200'>{tech.name}</span>
               </motion.div>
             ))}
           </div>
@@ -150,11 +150,11 @@ export default function Portfolio() {
             {/* Right side - form */}
             <form className='space-y-4'>
               <div className='flex gap-4'>
-                <input type='text' placeholder='First Name' className='w-1/2 p-3 rounded bg-gray-200 dark:bg-gray-800' />
-                <input type='text' placeholder='Last Name' className='w-1/2 p-3 rounded bg-gray-200 dark:bg-gray-800' />
+                <input type='text' placeholder='First Name' className='w-1/2 p-3 rounded bg-gray-200 dark:bg-gray-100' />
+                <input type='text' placeholder='Last Name' className='w-1/2 p-3 rounded bg-gray-200 dark:bg-gray-100' />
               </div>
-              <input type='email' placeholder='Email' className='w-full p-3 rounded bg-gray-200 dark:bg-gray-800' />
-              <textarea placeholder='Message' className='w-full p-3 rounded bg-gray-200 dark:bg-gray-800 h-32'></textarea>
+              <input type='email' placeholder='Email' className='w-full p-3 rounded bg-gray-200 dark:bg-gray-100' />
+              <textarea placeholder='Message' className='w-full p-3 rounded bg-gray-200 dark:bg-gray-100 h-32'></textarea>
               <button className='w-full p-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition'>Submit</button>
             </form>
           </motion.div>
@@ -163,7 +163,7 @@ export default function Portfolio() {
 
 
       {/* Footer */}
-      <footer className='py-6 text-center bg-gray-200 dark:bg-gray-800'>
+      <footer className='py-6 text-center bg-gray-200 dark:bg-gray-800 text-gray-200 dark:text-gray-200'>
         <div className='flex justify-center space-x-4'>
           <Link href="#"><FaGithub className='text-2xl' /></Link>
           <Link href="#"><FaLinkedin className='text-2xl' /></Link>

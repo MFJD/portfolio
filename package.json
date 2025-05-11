@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@ashwamegh/react-link-preview": "^1.0.1",
+    "emailjs": "^4.0.3",
     "framer-motion": "^12.6.1",
     "next": "15.2.4",
     "react": "^19.0.0",
